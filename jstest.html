@@ -633,20 +633,39 @@ let newMyName = myName();
 
 // console.log( digPow(46288, 3) );
 
-const humanYearsCatYearsDogYears = (humanYears) => {
-  humanYears >= 1 ? cY = 15 : cY = 0;
-  humanYears >= 1 ? dY = 15 : dY = 0;
-  humanYears >= 2 ? cY += 9 : cY = cY;
-  humanYears >= 2 ? dY += 9 : dY = dY;
-  humanYears == 3 ? cY += 4 : cY = cY;
-  humanYears == 3 ? dY += 5 : dY = dY;
-  // humanYears > 3 ? cY += 4 * humanYears : cY = cY;
-  // humanYears > 3 ? dY += 5 * humanYears : dY = dY;
-  // return dY;
-  // return cY;
-  return [humanYears,cY,dY]
-}
+// const humanYearsCatYearsDogYears = (humanYears) => {
+//   humanYears >= 1 ? cY = 15 : cY = 0;
+//   humanYears >= 1 ? dY = 15 : dY = 0;
+//   humanYears >= 2 ? cY += 9 : cY = cY;
+//   humanYears >= 2 ? dY += 9 : dY = dY;
+//   humanYears == 3 ? cY += 4 : cY = cY;
+//   humanYears == 3 ? dY += 5 : dY = dY;
+//   // humanYears > 3 ? cY += 4 * humanYears : cY = cY;
+//   // humanYears > 3 ? dY += 5 * humanYears : dY = dY;
+//   // return dY;
+//   // return cY;
+//   return [humanYears,cY,dY]
+// }
 
-console.log( humanYearsCatYearsDogYears(3) );
+// console.log( humanYearsCatYearsDogYears(3) );
+
+const lowest = arr => {
+  let n = arr[0];
+  // Regular for loop:
+  // for ( let x = 0; x < arr.length; x++ ) {
+    // Ternary way:
+    // n < arr[x] ? n = arr[x] : n = n;
+    // Normal if/else:
+    // if ( n < arr[x] ) {
+    //   n = arr[x];
+    // } 
+    // 
+  // }
+  // forEach with Ternary in an arrow function:
+  arr.forEach(x => x < n ? n = x : n = n);
+  arr.splice(arr.indexOf(n), 1);
+  // Return the new array:
+  return arr;
+}
 
 </script>

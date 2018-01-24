@@ -1,0 +1,47 @@
+// Git hub
+
+Fork
+Clone
+git status
+git add .
+git commit -m "MESSAGE"
+git status
+git push
+
+
+git init // invisible file that tracks the changes
+git remote add origin YOURADDRESS
+git remote -v // to check the version
+
+// Javascript
+
+Variables are used to store values.
+"var ES6: let, const"
+var & let are changable, const is not
+let & const get their own block scope
+Boolean, Null, Undefined, Number, String, Object, Array, Function
+Collections = Arrays (usually)
+expression vs. declaration
+Scope: local var's are used over global var's 
+Scope: can only look up, not down
+
+live-server --open=SpecRunner.html
+
+
+`${}`
+
+Callback: function passed as an argument in another function
+Ex:
+function logParams(param) {
+    conosle.log(param);
+}
+
+function callback() {
+    conosle.log("Callback);
+}
+
+function runner(cb) {
+    cd();
+}
+
+runner(callback);
