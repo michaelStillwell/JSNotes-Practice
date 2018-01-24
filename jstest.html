@@ -649,8 +649,8 @@ let newMyName = myName();
 
 // console.log( humanYearsCatYearsDogYears(3) );
 
-const lowest = arr => {
-  let n = arr[0];
+// const lowest = arr => {
+//   let n = arr[0];
   // Regular for loop:
   // for ( let x = 0; x < arr.length; x++ ) {
     // Ternary way:
@@ -662,10 +662,79 @@ const lowest = arr => {
     // 
   // }
   // forEach with Ternary in an arrow function:
-  arr.forEach(x => x < n ? n = x : n = n);
-  arr.splice(arr.indexOf(n), 1);
-  // Return the new array:
-  return arr;
+//   arr.forEach(x => x < n ? n = x : n = n);
+//   arr.splice(arr.indexOf(n), 1);
+//   // Return the new array:
+//   return arr;
+// }
+
+// const maker = () => {
+//   let a = [];
+//   for ( let x = 1; x < 216; x++ ) { a.push(x) };
+//   return a;
+// }
+
+// console.log( maker() );
+
+var getRandomArbitrary = function() {
+  return Math.floor(Math.random() * 30);
+};
+
+var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+
+const finder = arr => {
+  let n = getRandomArbitrary();
+  // for ( let x = 0; x < arr.length; x++ ) {
+  //   if ( arr[x] === n ) {
+  //     return "true" + n;
+  //   } else {
+  //     return "False" + n;
+  //   }
+  // }
+  if ( arr.includes(n) ) {
+    return "true" + n; 
+  } else {
+    return "false" + n;
+  }
+  // arr.forEach(x => {
+  //   if ( arr[x] = arr ) { 
+  //     return "true" + n;
+  //   } else {
+  //     return "false" + n;
+  //   }
+  // });
 }
+
+console.log( finder(numbers) );
+
+
+// Doesn't work for some reason?
+// const looper = array => array.forEach(x => {
+//   alert(array[x]);
+// });
+// looper(numbers);
+
+// const ArR = [ 1, 2, 3, 4, 5];
+
+// const addTen = array => {
+//   let n = [];
+//   for ( let x = 0; x < array.length; x++ ) {
+//     n.push(Number(array[x])+10);
+//   }
+//   array.forEach(x => {
+//     n.push(Number(x)+10);
+//   });
+//   return n;
+// }
+
+// console.log( addTen(ArR) );
+
+// Removing all of the duplicate numbers -- won't work on strings or objects.
+// const uniq = (a, cb) => {
+//   let n = a.filter( (i, p) => {
+//     return a.indexOf(i) == p;
+//   });
+//   cb(n);
+// }
 
 </script>
