@@ -1,0 +1,652 @@
+<script>
+  /*
+  var myNumbers = [ 2, 3, 5 ];
+  var doubled   = myNumbers.map( x => x * 2)
+
+  console.log( doubled );
+
+  var myPals = ["Bryan","Landy", "Cam", "Ian", "Corey", "Taylor", "Megan"];
+
+  var longNames =  myPals.filter(x => x.length > 4);
+
+  var people = [
+  {name: "Landy",friend: true},
+  {name: "Corey",friend: true},
+  {name: "Ted",friend: false},
+  {name: "Sperry",friend: true},
+  {name: "Bill",friend: false}
+];
+
+var friends = [];
+people.forEach(person=>{
+  if(person.friend === true){
+    friends.push(person.name)
+  }
+})
+
+var myName = [{first:"Michael",last:"Stillwell"}]
+
+function makeName(firstName, lastName){
+  return firstName + " " + lastName;
+}
+
+//code here
+
+var firstLast = makeName( myName.first, myName.last );
+
+console.log( makeName( myName[1], myName.last) )
+
+var colorResponse = "black";
+
+var responseCreator = function(param) {
+  // CODE HERE
+  if ( param == "red" ) {
+    return "Green is okay.";
+  } else if ( param == "red" ) {
+    return "I heart red.";
+  } else { 
+    return "What is your favorite color?";
+  }
+  return param;
+}
+
+console.log( responseCreator(colorResponse) );
+
+var age = 15;
+var canDrive;
+
+
+// CODE HERE
+if ( age > 16 ) { 
+  canDrive = true
+} else { 
+  canDrive = false
+}; 
+
+console.log( canDrive );
+
+var myNam   = "Michael";
+var faveNum = 23;
+var me = "My name is " + myNam + " and my favorite number is " + faveNum + ".";
+
+console.log( me );
+
+var notHakeem = (myNam) => {
+  if ( myName != "Hakkem" ) {
+    return true;
+  } 
+}
+
+console.log( notHakeem );
+
+function sum(par) {
+  return par + par;
+}
+
+console.log( sum(4) );
+
+function greeter(name, num) {
+  return "Hi! I am " + name + " and I am " + num + " years old!";
+}
+
+console.log( greeter( "yan", 2000 ) );
+
+var trueFaveNum = (num) => {
+  if ( num == faveNum ) {
+    trueFaveNum = true;
+  } else {
+    trueFaveNum = false;
+  }
+  return trueFaveNum;
+}
+
+console.log( trueFaveNum(23) );
+
+var responseCreator = function(param) {
+  // CODE HERE
+  if ( param == "green" ) {
+    return "Green is okay";
+  } else if ( param == "red" ) {
+    return "I heart red";
+  } else { 
+    return "What is your favorite color?";
+  }
+  return param;
+}
+
+console.log( responseCreator("blue") );
+
+console.log( Math.trunc(3.4) );
+
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if ( num < 3 ) {
+    return str.slice(0, num) + "...";
+  } else if ( str.length > num ) {
+    return str.slice(0, num - 3) + "...";
+  } else if ( str.length <= num ) {
+    return str;
+  }
+}
+
+console.log( truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) );
+
+text_truncate = function(str, length, ending) {
+    if (length == null) {
+      length = 100;
+    }
+    if (ending == null) {
+      ending = '...';
+    }
+    if (str.length > length) {
+      return str.substring(0, length - ending.length) + ending;
+    } else {
+      return str;
+    }
+  };
+console.log(text_truncate('We are doing JS string exercises.'))
+console.log(text_truncate('We are doing JS string exercises.',19))
+console.log(text_truncate('We are doing JS string exercises.',15,'!!'))
+
+
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  if ( str.substr() === target ) {
+    return true;
+  } else {
+    return false;
+  }
+
+  return str;
+}
+
+confirmEnding("Bastian", "n");
+
+
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count += 1;
+      break;
+    case 7:
+    case 8:
+    case 9:
+      count = count;
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count -= 1;
+      break;
+  }
+  
+  return count;
+  // Only change code above this line
+}
+
+// Add/remove calls to test your function.
+// Note: Only the last will display
+cc(2); cc(3); cc(10); cc('K'); cc('A');
+
+console.log( count );
+
+
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+  
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+  result = lookup;
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+console.log( phoneticLookup("charlie") );
+
+
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+// Only change code below this line
+var gloveBoxContents = "";
+console.log( gloveBoxContents = myStorage.car["glove box"] ); // Change this line
+
+// Setup
+var collection = {
+  2548: {
+    album: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: [ 
+      "Let It Rock", 
+      "You Give Love a Bad Name" 
+    ]
+  },
+  2468: {
+    album: "1999",
+    artist: "Prince",
+    tracks: [ 
+      "1999", 
+      "Little Red Corvette" 
+    ]
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [ ]
+  },
+  5439: {
+    album: "ABBA Gold"
+  }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+if ( (value !== "") && (prop !== "tracks") ) {      
+  collection[id][prop] = value;
+  //Object.assign(collection[id], {[prop]: value} );
+}
+
+if ( !collection[id].hasOwnProperty("tracks") ) {
+  collection[id].tracks = [];
+}
+
+if ( (prop === "tracks") && (value !== "") ) {
+  collection[id].tracks.push(value);
+}
+
+if ( value === "" ) {
+  delete collection[id][prop];
+}
+
+return collection;
+}
+
+// Alter values below to test your code
+updateRecords(5439, "tracks", "ABBA");
+
+
+
+console.log( collection[5439] );
+
+/*
+var ar = {
+  "Y": "T",
+  "U": "A"
+}
+ar["O"] = "P";
+console.log(ar);
+*/
+
+/*
+//Setup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(firNam, prop){
+// Only change code below this line
+  return contacts[0][firNam];
+// Only change code above this line
+}
+
+// Change these values to test your function
+console.log( lookUpProfile("Akira", "likes") );
+
+var stuff = [
+  {
+    "first" : "Fir",
+    "second": "Sec"
+  },
+  {
+    "first" : "r",
+    "second": "c"
+  }
+]
+
+function stuffStuff(fis, pop) {
+  return stuff[0][fis];
+}
+
+console.log( stuffStuff("second", "second") );
+
+var oldObject = { key1: 1, key2: 2, key3: 3 };
+var newKey = "key4";
+var newValue = 4;
+
+Object.assign(oldObject, {newKey: newValue});
+
+console.log( oldObject );
+
+function factorialize(nu) {
+  if ( nu <= 0 ) {
+    return 1;
+  } else {
+    return ( nu * factorialize(nu - 1) );
+  }
+}
+
+console.log( factorialize(5) );
+
+
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var numOfSplits = Math.floor(arr.length / Math.floor(size));
+  var newArray    = [];
+  var splitArray  = [];
+  var newOldArray = [];
+  
+  while ( numOfSplits !== 0 ) {
+    numOfSplits--;
+    
+    splitArray = arr.slice(0, size);
+    newArray.push(splitArray);
+  } );
+  
+  //for ( var x = 0; x < numOfSplits; x++ ) {
+  //  splitArray = arr.slice(0, size);
+  //  newArray.push(splitArray);
+  //}
+  
+  //if ( numOfSplits > 0 ) {
+  //  splitArray = arr.slice(0, size);
+  //}
+  
+  //newArray.push(splitArray);
+  
+  //return newArray;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d", "e"], 2);
+*/
+
+/* Checks if the second string's letters are in the first string, 
+   Example: "hello", "hey" returns false, "floor", "for" returns true!
+function mutation(arr) {
+  var nm   = [];
+  var arr1 = arr[0].toLowerCase();
+
+  if ( arr1.length > 2 ) {
+    return "Too many words to compare, sorry.";
+  }
+
+  for ( var x = 0; x < arr[1].length; x++ ) {
+    if ( arr1.indexOf(arr[1][x].toLowerCase()) != -1 ) {
+      nm.push(1);
+      //console.log( num );
+    } else {
+      nm.push(0);
+      //console.log( num );
+    }
+  }
+
+  if ( nm.indexOf(0) != -1 ) {
+    //return false;
+    console.log( "False" );
+  } else {
+    //return true;
+    console.log( "True" );
+  }
+  
+}
+
+
+console.log( mutation(["hello", "hey"]) );
+
+*/
+
+/*  Break an array up in to smaller array's the size of the second argument
+    Example: [1,2,3,4],2 returns [1,2],[3,4]  */
+/*
+function chunkArrayInGroups(arr, size) {
+  return arr;
+}
+
+//console.log( chunkArrayInGroups(["a", "b", "c", "d"], 2) );
+
+function myName() {
+  return "ti";
+}
+
+let newMyName = myName();
+*/
+
+
+//function destroyer(arr) {
+  //let val;
+  // function test(arr) {
+  //   let val = arr.filter(function(arg) {
+  //     for ( let x = 0; x < arguments.length; x++ ) {
+  //       if ( arguments[x] < arg ) {
+  //         return true;
+  //       }
+  //     }
+  //   });
+  //   console.log( val );
+  // }
+
+  // console.log( test([1,2,3],5,3) );
+  //console.log( val );
+//}
+
+// function destroyerNew(arr) {
+
+//   let num = [];
+
+//   for ( let x = 0; x < arguments.length; x++ ) {
+//     nu
+//   }
+
+//   return arr.filter( function() {
+//     return arr.indexOf() == arguments[1];
+//   });
+// }
+
+//console.log( destroyer([1, 2, 3, 1, 2, 3], 2, 3, 4) );
+
+// const testObj = {
+//   name: "S",
+//   age: 4,
+//   role: ""
+// }
+// const isOldEnough = (obj) => obj.age >= 21 ? "Old enough" : "Not quite";
+
+// console.log( isOldEnough(testObj) );
+
+// const addRole = (user, str) => user.role = str;
+
+// console.log( addRole(testObj, "Nane") );
+
+// var user0 = {
+//   name: 'James',
+//   email: null,
+//   flag: true
+// }
+
+// const updateUserInfo = (arr, prop, val, newE, newN) => {
+//   for ( let x = 0; x < arr.length; x++ ) {
+//     if ( arr[x][prop] === val ) {
+//       arr[x].email = newE;
+//       arr[x].name = newN;
+//     }
+//   }
+//   return arr;
+// } 
+
+// console.log( updateUserInfo( [ user0 ], 'name', 'James', 'email@domain.com', 'Bob' ) );
+
+// const schoolStatus = (status) => status === "good" ? "Wow, great job kiddo!" : "No more video games!";
+
+// console.log( schoolStatus("dd") );
+
+// const add = (num1, num2) => num1 + num2;
+
+// const multiply = (num1, num2) => num1 * num2;
+
+// const maff = (num1, num2, cb) => cb(num1, num2);
+
+// console.log( maff(3, 4, add) );
+
+// Bad practice, break in to if/else statements instead.
+// const messageBasedOnAge = age => age < 18 ? "Not quite old enough" : age == 18 ? "Congrats on being an adult!" : "Wow, you're really getting up there, huh?";
+
+// console.log( messageBasedOnAge(90) );
+
+// const welcomeMessage = (first, last) => `Welcome to DevMountain ${first} ${last}`;
+
+// const fullName = (firstName, lastName, cb) => cb(firstName, lastName);
+
+// console.log( fullName("M","S", welcomeMessage) );
+
+// const countBits = (n) => {
+//   const bi = parseInt(n, 10).toString(2).split("");
+//   let n1 = 0;
+  
+//   for ( let x = 0; x < bi.length; x++ ) {
+//     if ( bi[x] == 1 ) {
+//       n1 += 1;
+//     }
+//   }
+  
+//   return `this is bi: ${bi} and this is n1: ${n1}`;
+// }
+
+// function countBits(n) {
+//   for(c=0;n;n>>=1)c+=n&1
+//   return c;
+// }
+
+// const countBits = n => {
+//   for ( x = 0; n; n >>= 1) {
+//     x += n & 1;
+//   }
+//   return x;
+// }
+
+// console.log( countBits(3) );
+
+// let n = 5
+// console.log( n >>= 2 );
+
+//  Works, but doesn't work for the question given :/
+//  let funnyNums = (n,p) => {
+//   let e = n.toString().split("").map(Number);
+
+//   for ( let x = 0; x < e.length; x++ ) {
+//     e[x] = e[x] ** (p + x);
+//   }
+
+//   const add = (num1, num2) => num1 + num2;
+
+//   if ( e.reduce(add) == n ** p ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log( funnyNums(89, 1) );
+
+// const square = x => Math.pow(x, 2);
+// console.log( square(2) );
+
+// const digPow = (n,p) => {
+//   let e = n.toString().split("").map(Number);
+
+//   for ( let x = 0; x < e.length; x++ ) {
+//     e[x] = Math.pow(e[x], (p + x));
+//     // Either work, ** doesn't work with ES6 though
+//     // e[x] = e[x] ** (p + x);
+//   }
+
+//   let i = e.reduce((num1, num2) => num1 + num2);
+
+//   if ( i % n === 0 ) { return i / n } else { return -1 };
+//   Or
+//   return i % n ? -1 : i / n;
+
+// };
+
+
+// Quicker way of writing the the function above:
+// function digPow(n, p) {
+//   var x = String(n).split("").reduce((s, d, i) => s + Math.pow(d, p + i), 0)
+//   return x % n ? -1 : x / n
+// }
+
+// console.log( digPow(46288, 3) );
+
+const humanYearsCatYearsDogYears = (humanYears) => {
+  humanYears >= 1 ? cY = 15 : cY = 0;
+  humanYears >= 1 ? dY = 15 : dY = 0;
+  humanYears >= 2 ? cY += 9 : cY = cY;
+  humanYears >= 2 ? dY += 9 : dY = dY;
+  humanYears == 3 ? cY += 4 : cY = cY;
+  humanYears == 3 ? dY += 5 : dY = dY;
+  // humanYears > 3 ? cY += 4 * humanYears : cY = cY;
+  // humanYears > 3 ? dY += 5 * humanYears : dY = dY;
+  // return dY;
+  // return cY;
+  return [humanYears,cY,dY]
+}
+
+console.log( humanYearsCatYearsDogYears(3) );
+
+</script>
