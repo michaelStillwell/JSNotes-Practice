@@ -1,4 +1,3 @@
-<script>
   /*
   var myNumbers = [ 2, 3, 5 ];
   var doubled   = myNumbers.map( x => x * 2)
@@ -787,66 +786,66 @@ let newMyName = myName();
 
 // hiddenTreasure(o);
 
-// Do not edit the code below.
-const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
-{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
-{"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
-{"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
-{"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
-{"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
-{"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
-{"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
-{"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
-// Do not edit the code above.
-// function strongest(arr) {
-//   let arr2 = [];
+// // Do not edit the code below.
+// const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
+// {"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
+// {"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
+// {"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
+// {"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
+// {"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
+// {"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
+// {"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
+// {"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
+// // Do not edit the code above.
+// // function strongest(arr) {
+// //   let arr2 = [];
+// //   for ( let x = 0; x < arr.length; x++ ) {
+// //     for ( let key in arr[x] ) {
+// //       if ( arr[x].CP > 200 ) {
+// //         arr2.push(arr[x]);
+// //       }
+// //     }
+// //   }
+// //   return arr2;
+// // }
+
+// // const myStrongest = monstersInYourPocket.filter(x => x.CP > 200 ? true : false);
+
+// // console.log( myStrongest );
+
+// // Do not edit code below.
+// const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
+// {"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
+// {"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
+// {"price":48,"tax":0.13}];
+// // Do not edit code above.
+
+// /*
+//   Use a high order method to get sum of all the order totals
+// */
+// function totalTotal(arr) {
+//   let t = 0;
 //   for ( let x = 0; x < arr.length; x++ ) {
-//     for ( let key in arr[x] ) {
-//       if ( arr[x].CP > 200 ) {
-//         arr2.push(arr[x]);
-//       }
-//     }
+//     // for ( let key in arr[x] ) {
+//     t = arr[x].price * (arr[x].tax + 1);
+//     // }
 //   }
-//   return arr2;
+//   return t;
 // }
 
-// const myStrongest = monstersInYourPocket.filter(x => x.CP > 200 ? true : false);
+// let ordersTotal = orders.map(x => x.price * (x.tax + 1));
 
-// console.log( myStrongest );
+// console.log( totalTotal(orders) );
 
-// Do not edit code below.
-const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
-{"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
-{"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
-{"price":48,"tax":0.13}];
-// Do not edit code above.
-
-/*
-  Use a high order method to get sum of all the order totals
-*/
-function totalTotal(arr) {
-  let t = 0;
-  for ( let x = 0; x < arr.length; x++ ) {
-    // for ( let key in arr[x] ) {
-    t = arr[x].price * (arr[x].tax + 1);
-    // }
-  }
-  return t;
-}
-
-let ordersTotal = orders.map(x => x.price * (x.tax + 1));
-
-console.log( totalTotal(orders) );
-
-// Do not edit the code below.
-const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
-{"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
-{"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
-{"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
-{"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
-{"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
-{"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
-// Do not edit the code above.
+// // Do not edit the code below.
+// const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
+// {"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
+// {"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
+// {"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
+// {"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
+// {"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
+// {"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
+// // Do not edit the code above.
 
 /*
   Use a high order method to create to get the sum of bobsTotal.
@@ -882,6 +881,229 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 
 // console.log( removedDups(arrar) );
 
+// var materials = [
+//     'Hydrogen',
+//     'Helium',
+//     'Lithium',
+//     'Beryllium'
+//   ];
+    
+//   materials.map(function(material) { 
+//     return material.length; 
+//   }); // [8, 6, 7, 9]
+  
+//   materials.map((material) => {
+//     return material.length;
+//   }); // [8, 6, 7, 9]
+  
+//   materials.map(material => material.length); // [8, 6, 7, 9]
+
+
+//   var myNumbers = [ 2, 5, 6 ];
+//   var doubled   = myNumbers.forEach( function (num, i, arr) {
+//     return arr[i] *= 2;
+//   })
+
+//   console.log( doubled );
+
+//   var colorResponse = "red";
+  
+//   var responseCreator = function(param) {
+//     // CODE HERE
+//     if ( param = "green" ) {
+//       return "Green is okay.";
+//     } else if ( param = "red" ) {
+//       return "I heart red.";
+//     } else { 
+//       return "What is your favorite color?";
+//     }
+//     return param;
+//   }
+
+//   console.log( responseCreator(colorResponse) );
+
+// var nameSentence = "My name is ";
+// var nameMethods = {
+// herb: function(){nameSentence+="Herbert."},
+// jordan: function(){nameSentence+="Jordan."},
+// clive: function(){nameSentence+="Clive."},
+// brittany: function(){nameSentence+="Brittany."},
+// };
+// var name = nameMethods.clive();
+
+// console.log(nameMethods.clive());
+
+// function noTwosAllowed(num) {
+//     if ( num != 2 ) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(noTwosAllowed(2));
+
+// function hasGlasses(x) {
+//     if ( x === true ) {
+//         return true;
+//     } else if ( x === false ) {
+//         return false;
+//     } else {
+//         return "Not a boolean";
+//     }
+// };
+
+// console.log(hasGlasses(4));
+
+// function test(string) {
+//     if ( string == "hi" ) {
+//         console.log("Yes");
+//     } else {
+//         console.log("No");
+//     }
+// }
+// test(4);
+
+// function adding(num1, limit) {
+
+// }
+
+// console.log(adding(0, 5));
+
+
+// function hasGlasses(boo1, boo2) {
+//     if ( (boo1 === true) && (boo2 === true) ) {
+//         return "Nice glasses.";
+//     } else if ( (boo1 === false) && (boo2 === true) ) {
+//         return "Congrats on being one of the few people who look good with glasses!";
+//     } else if ( (boo1 === false) && (boo2 === false) ) {
+//         return "Maybe you should look into getting some glasses...";
+//     }
+// }
+
+// console.log(hasGlasses(false, true));
+
+// function loveTheH(str) {
+//     for ( i = 0; i < 2; i++ ) {
+//         str + "H";
+//     };
+//     return str;
+// };
+
+// console.log(loveTheH("hi there"));
+
+// var array = [1, 2, 4, 5];
+
+// function changeArray(arr, change) {
+//     for ( i = 0; i < arr.length; i++) {
+//         arr[i] = change;
+//     };
+//     return arr;
+// };
+
+// console.log(array);
+// console.log(changeArray(array, 5));
+
+// var total = 0;
+// var array1 = { 1: 1, 4: 1, 3:1, 4:1, 5:2, 4:1, 5:2 };
+
+// function totalOfNumber(are) {
+//     for ( i in are ) {
+//         total += are[i];
+//     };
+//     return total;
+// };
+
+// console.log( totalOfNumber(array1) );
+
+
+// var infoAboutJamesBond = {
+//     firstName:"James",
+//     lastName:"Bond",
+//     hobby: "Murder"
+// };
+
+// function IwasNeverHere(arr1) {
+//     for ( i in arr1 ) {
+//         arr1[i] = "redacted";
+//     };
+//     return arr1;
+// };
+
+// console.log( IwasNeverHere(infoAboutJamesBond) );
+
+// var user11553 = {username:"JStudent01"};
+// var instagram = "JMann22";
+// var twitter = "JohnM22";
+
+// function updateSocialMedia(obj, str1, str2) {
+//     obj.instagramID = str1;
+//     obj.twitterID   = str2;
+//     return obj;
+// };
+// console.log( updateSocialMedia(user11553, instagram, twitter) );
+
+// var nums = [ 1, 3, 4, 5, 6, 12, 36 ];
+// function averageArray(ara, evenOrOdd) {
+//     var tot = 0;
+//     for ( i = 0; i < ara.length; i++ ) {
+//         tot += ara[i];
+//     };
+//     console.log( tot );
+
+//     if ( evenOrOdd == "even" ) {
+//         console.log("This is even.");
+//     } else if ( evenOrOdd == "odd" ) {
+//         console.log("This is odd.");
+//     };
+// };
+
+// averageArray(nums, "even");
+
+// var num2 = [ 2, 4, 5, 3, 5, 7 ];
+
+// function averageArray2(arr2, eOo) {
+//     var testNums = 0;
+//     var eve      = 0;
+//     var od       = 0;
+//     for ( i = 0; i < arr2.length; i++ ) {
+//         var ev = arr2[i] % 2;
+//         if ( ev = 0 ) {
+//             eve += arr2[i];
+//         } else if ( ev > 0 ) {
+//             od  += arr2[i];
+//         };
+//     };
+//     return ev;
+// };
+
+// averageArray(num2, 0);
+
+// console.log(4%2);
+
+// class Puppy{
+//     constructor(happiness, energy, behavior)  {
+//         this.happiness = happiness;
+//         this.energy    = energy;
+//         this.behavior  = behavior;
+//     }
+
+//     getsTreats(param) {
+//         this.happiness += 20;
+//         return this.happiness;
+//     }
+
+//     takesNap() {
+//         return this.energy   -= 45;
+//         return this.behavior += 15;
+//     }
+// }
+
+// var getsTreats = Puppy.getsTreats();
+
+// console.log(new Puppy(100, 40, 50));
+// console.log(Puppy.takesNap); 
+
 // // Do not edit the code below.
 // var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // // Do not edit the code above.
@@ -911,6 +1133,29 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 // }
 
 // console.log(looper());
+// A way to remove a numbers, not sure how effecitive, needs more testing
+// const a1 = [1, 2, 2, 3, 4, 5, 3, 3, 3, 4, 3, 2, 1];
+// const a2 = [1, 3];
 
+// const array_diif = (a, b) => a.filter(x => x = b ? a.splice(a.indexOf(b)) : x = x);
 
-</script>
+// console.log( array_diif(a1, a2) );
+
+// Adds two numbers together and converts them to binary
+// const addBinary = (a, b) => ((a + b) >>> 0).toString(2);
+
+// console.log( addBinary(1, 2) );
+
+// Takes two strings of only letters and sorts them then returns it as a string containing only unique letters
+const longest = (s1, s2) => {
+  let a = new Array;
+  // a.push(s1.split(""), s2.split(""));
+  // a.filter(x => a.indexOf = x ? true : false);
+  return typeof a;
+}
+
+const s = "String";
+console.log(typeof s.split(""));
+
+console.log( longest("aretheyhere", "yestheyarehere") );
+
