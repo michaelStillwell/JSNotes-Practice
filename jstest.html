@@ -851,66 +851,66 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 /*
   Use a high order method to create to get the sum of bobsTotal.
 */
-function reduction(arr) {
-  for ( let x = 0; x < arr.length; x++ ) {
-    if ( arr[x].Bob ) {
-      return "Hi";
-    }
-  }
-}
+// function reduction(arr) {
+//   for ( let x = 0; x < arr.length; x++ ) {
+//     if ( arr[x].Bob ) {
+//       return "Hi";
+//     }
+//   }
+// }
 
-let bobsTotal = purchases.filter(x => x.owner === "Bob");
-let t = 0;
-for ( let x = 0; x < bobsTotal.length; x++ ) {
-  t += bobsTotal[x].price; 
-}
+// let bobsTotal = purchases.filter(x => x.owner === "Bob");
+// let t = 0;
+// for ( let x = 0; x < bobsTotal.length; x++ ) {
+//   t += bobsTotal[x].price; 
+// }
 
-console.log(t);
+// console.log(t);
 
-const arrar = [ 1, 1, 2, 3, 4, 5, 5 ];
+// const arrar = [ 1, 1, 2, 3, 4, 5, 5 ];
 
-const removedDups = a => {
-  let newArr = [];
-  for ( let x = 0; x < a.length; x++ ) {
-    if ( newArr.indexOf(a[x]) == -1 ) {
-      newArr.push(a[x]);
-    }
-  }
-  // let newArr = Array.from(new Set(a));
-  return newArr;
-}
+// const removedDups = a => {
+//   let newArr = [];
+//   for ( let x = 0; x < a.length; x++ ) {
+//     if ( newArr.indexOf(a[x]) == -1 ) {
+//       newArr.push(a[x]);
+//     }
+//   }
+//   // let newArr = Array.from(new Set(a));
+//   return newArr;
+// }
 
-console.log( removedDups(arrar) );
+// console.log( removedDups(arrar) );
 
-// Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
-// Do not edit the code above.
+// // Do not edit the code below.
+// var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+// // Do not edit the code above.
 
-/*
-  Above is an array of arrays. Use two for loops.
-    1. Write a function called 'looper'. 
-    2. 'looper' should loop over the arrays.
-    3.  If the number is odd, replace it with 'odd'.
-        If the number is even, replace it with 'even'.
-    4. Return the modified numsArr.
-*/
+// /*
+//   Above is an array of arrays. Use two for loops.
+//     1. Write a function called 'looper'. 
+//     2. 'looper' should loop over the arrays.
+//     3.  If the number is odd, replace it with 'odd'.
+//         If the number is even, replace it with 'even'.
+//     4. Return the modified numsArr.
+// */
 
-//Code Here
+// //Code Here
 
-const looper = () => {
-  for ( let x = 0; x < numsArr.length; x++ ) {
-    for ( let i = 0; i < numsArr[x].length; i++ ) {
-      if ( numsArr[x][i] % 2 > 0 ) {
-        numsArr[x][i] = "odd";
-      } else if ( numsArr[x][i] % 2 === 0 ) {
-        numsArr[x][i] = "even";
-      }
-    }
-  }
-  return numsArr;
-}
+// const looper = () => {
+//   for ( let x = 0; x < numsArr.length; x++ ) {
+//     for ( let i = 0; i < numsArr[x].length; i++ ) {
+//       if ( numsArr[x][i] % 2 > 0 ) {
+//         numsArr[x][i] = "odd";
+//       } else if ( numsArr[x][i] % 2 === 0 ) {
+//         numsArr[x][i] = "even";
+//       }
+//     }
+//   }
+//   return numsArr;
+// }
 
-console.log(looper());
+// console.log(looper());
 
 
 </script>
