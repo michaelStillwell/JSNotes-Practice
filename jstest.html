@@ -676,14 +676,14 @@ let newMyName = myName();
 
 // console.log( maker() );
 
-var getRandomArbitrary = function() {
-  return Math.floor(Math.random() * 30);
-};
+// var getRandomArbitrary = function() {
+//   return Math.floor(Math.random() * 30);
+// };
 
-var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+// var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
-const finder = arr => {
-  let n = getRandomArbitrary();
+// const finder = arr => {
+//   let n = getRandomArbitrary();
   // for ( let x = 0; x < arr.length; x++ ) {
   //   if ( arr[x] === n ) {
   //     return "true" + n;
@@ -691,11 +691,11 @@ const finder = arr => {
   //     return "False" + n;
   //   }
   // }
-  if ( arr.includes(n) ) {
-    return "true" + n; 
-  } else {
-    return "false" + n;
-  }
+  // if ( arr.includes(n) ) {
+  //   return "true" + n; 
+  // } else {
+  //   return "false" + n;
+  // }
   // arr.forEach(x => {
   //   if ( arr[x] = arr ) { 
   //     return "true" + n;
@@ -703,9 +703,9 @@ const finder = arr => {
   //     return "false" + n;
   //   }
   // });
-}
+// }
 
-console.log( finder(numbers) );
+// console.log( finder(numbers) );
 
 
 // Doesn't work for some reason?
@@ -736,5 +736,181 @@ console.log( finder(numbers) );
 //   });
 //   cb(n);
 // }
+
+// class Employee {
+//   constructor(first_name, last_name, email, age) {
+//     this.first_name = first_name;
+//     this.last_name  = last_name;
+//     this.email      = email;
+//     this.age        = age;
+//   }
+//   makeWidget() {
+//     return `${this.first_name} ${this.last_name} Widget`;
+//   }
+// }
+
+// let t = new Employee("Fir","Las","fasf",43);
+
+// console.log( t.makeWidget() );
+
+// const o = {
+//   a: "shoo",
+//   b: "shww",
+//   c: "shw"
+// }
+
+// const secrets = obj => {
+//   let s = "";
+//   for ( let key in obj ) {
+//     if ( obj[key].substring(0, 2) === "sh") {
+//       s += " " + obj[key];
+//     }
+//   }
+//   return s;
+// }
+// console.log( secrets(o) );
+
+// const o = {
+//   a: "Find my tresure",
+//   b: "Lost my ww"
+// }
+
+// function hiddenTreasure(obj) {
+//   for ( let key in obj ) {
+//     if ( RegExp('\\b'+ "treasure" +'\\b').test(obj[key]) ) {
+//       console.log("Meo");
+//     } else {
+//       console.log("no");
+//     }
+//   }
+// }
+
+// hiddenTreasure(o);
+
+// Do not edit the code below.
+const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
+{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
+{"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
+{"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
+{"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
+{"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
+{"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
+{"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
+{"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
+// Do not edit the code above.
+// function strongest(arr) {
+//   let arr2 = [];
+//   for ( let x = 0; x < arr.length; x++ ) {
+//     for ( let key in arr[x] ) {
+//       if ( arr[x].CP > 200 ) {
+//         arr2.push(arr[x]);
+//       }
+//     }
+//   }
+//   return arr2;
+// }
+
+// const myStrongest = monstersInYourPocket.filter(x => x.CP > 200 ? true : false);
+
+// console.log( myStrongest );
+
+// Do not edit code below.
+const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
+{"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
+{"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
+{"price":48,"tax":0.13}];
+// Do not edit code above.
+
+/*
+  Use a high order method to get sum of all the order totals
+*/
+function totalTotal(arr) {
+  let t = 0;
+  for ( let x = 0; x < arr.length; x++ ) {
+    // for ( let key in arr[x] ) {
+    t = arr[x].price * (arr[x].tax + 1);
+    // }
+  }
+  return t;
+}
+
+let ordersTotal = orders.map(x => x.price * (x.tax + 1));
+
+console.log( totalTotal(orders) );
+
+// Do not edit the code below.
+const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
+{"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
+{"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
+{"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
+{"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
+{"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
+{"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
+// Do not edit the code above.
+
+/*
+  Use a high order method to create to get the sum of bobsTotal.
+*/
+function reduction(arr) {
+  for ( let x = 0; x < arr.length; x++ ) {
+    if ( arr[x].Bob ) {
+      return "Hi";
+    }
+  }
+}
+
+let bobsTotal = purchases.filter(x => x.owner === "Bob");
+let t = 0;
+for ( let x = 0; x < bobsTotal.length; x++ ) {
+  t += bobsTotal[x].price; 
+}
+
+console.log(t);
+
+const arrar = [ 1, 1, 2, 3, 4, 5, 5 ];
+
+const removedDups = a => {
+  let newArr = [];
+  for ( let x = 0; x < a.length; x++ ) {
+    if ( newArr.indexOf(a[x]) == -1 ) {
+      newArr.push(a[x]);
+    }
+  }
+  // let newArr = Array.from(new Set(a));
+  return newArr;
+}
+
+console.log( removedDups(arrar) );
+
+// Do not edit the code below.
+var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+// Do not edit the code above.
+
+/*
+  Above is an array of arrays. Use two for loops.
+    1. Write a function called 'looper'. 
+    2. 'looper' should loop over the arrays.
+    3.  If the number is odd, replace it with 'odd'.
+        If the number is even, replace it with 'even'.
+    4. Return the modified numsArr.
+*/
+
+//Code Here
+
+const looper = () => {
+  for ( let x = 0; x < numsArr.length; x++ ) {
+    for ( let i = 0; i < numsArr[x].length; i++ ) {
+      if ( numsArr[x][i] % 2 > 0 ) {
+        numsArr[x][i] = "odd";
+      } else if ( numsArr[x][i] % 2 === 0 ) {
+        numsArr[x][i] = "even";
+      }
+    }
+  }
+  return numsArr;
+}
+
+console.log(looper());
+
 
 </script>
