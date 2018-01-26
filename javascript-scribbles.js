@@ -1159,39 +1159,39 @@ let newMyName = myName();
 
 // console.log( longest("aretheyhere", "yestheyarehere") );
 
-class Machine {
-  constructor() {
-    this.widgets_made_count  = 0;
-    this.wear_and_tear_count = 0;
-    this.needs_reboot        = false;
-  }
+// class Machine {
+//   constructor() {
+//     this.widgets_made_count  = 0;
+//     this.wear_and_tear_count = 0;
+//     this.needs_reboot        = false;
+//   }
 
-  makeWidgets(num) {
-    this.widgets_made_count += num;
-    this.wear_and_tear_count += (1 * Math.floor(num / 50));
-  }
+//   makeWidgets(num) {
+//     this.widgets_made_count += num;
+//     this.wear_and_tear_count += (1 * Math.floor(num / 50));
+//   }
 
-  fixMachine() { this.needs_reboot = true };
+//   fixMachine() { this.needs_reboot = true };
 
-  reboot() {
-    // fixMachine();
-    this.wear_and_tear_count -= 10;
-    this.needs_reboot         = false;
-    return this;
-  }
-}
+//   reboot() {
+//     // fixMachine();
+//     this.wear_and_tear_count -= 10;
+//     this.needs_reboot         = false;
+//     return Function;
+//   }
+// }
 
-const m = new Machine();
-m.makeWidgets(50);
-m.fixMachine();
-m.reboot();
-let rebootComplete = m.reboot();
-rebootComplete();
-console.log( m );
+// const m = new Machine();
+// m.makeWidgets(50);
+// m.fixMachine();
+// m.reboot();
+// let rebootComplete = m.reboot();
+// rebootComplete();
+// console.log( m );
 
-const ss = () => console.log( "HO" );
-const a = ss();
-console.log( typeof a );
+// const ss = () => console.log( "HO" );
+// const a = ss();
+// console.log( typeof a );
 
 //Code Here
 
@@ -1253,3 +1253,163 @@ console.log( typeof a );
 // const e = new ProgressiveManager("N","S","SSS",4,[1,2,2]);
 // e.hire();
 // console.log( e )
+
+// Function that can understand math, ex. "1 + 1" => 2, "18 + 4*6" => 42
+// const mathematicalString = s => {
+//   return s;
+// }
+
+// mathematicalString("1 + 1");
+
+// console.log( parseInt("55") );
+
+// // This function squares every digit in a given number.
+// const squareDigits = n => parseInt(n.toString().split("").map( x => x ** 2 ).join(""));
+// const squareDigits = n => parseInt(n.toString().split("").map( x => Math.pow(x, 2) ).join(""));
+
+// console.log( typeof squareDigits(454) );
+
+// This function takes in two numbers and finds the sum of every number in between the two, if they are the same it returns the number.
+// const getSum = (a, b) => {
+//   if (a == b) { a };
+//   return a > b ? ((a-b)+1) * (a+b) / 2 : ((b-a)+1) * (a+b) / 2;
+// }
+
+// const GetSum = (a, b) => {
+//   let n = Math.min(a, b), 
+//       x = Math.max(a, b);
+//   return (max - min + 1) * (min - max) / 2;
+// }
+
+// console.log( getSum(7,7) );
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Unsolved //
+// This function takes in an array of directions, NORTH, EAST, SOUTH, WEST, and returns the array after removing the opposites -- N-S, E-W
+// const dirReduc = a => {
+  // let na = [];
+  // for ( let x = 0; x < a.length; x++ ) {
+  //   if ( a[x] === "NORTH" ) {
+  //     na.push(1);
+  //   } else if ( a[x] === "SOUTH" ) {
+  //     na.push(2);
+  //   } else if ( a[x] === "EAST" ) {
+  //     na.push(3);
+  //   } else if ( a[x] === "WEST" ) {
+  //     na.push(4);
+  //   }
+  // }
+  // na.map((x,y) => {
+  //   if ( x === 1 && y === 2 ) {
+  //     a.splice(a[x], 1);
+  //     a.splice(a[y], 1);
+  //   }
+  // });
+  // return na;
+//   for ( let x = 0; x < a.length; x++ ) {
+//     console.log(a[x] + a[x+1]);
+//   }
+// }
+
+// console.log( dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]) ); // Should be ["WEST"].
+
+// Given an array of Objects -- hashes -- return a string of names seperated by commas with the last pair containing an &
+// const list = h => {
+//   let s = "";
+  // for ( let x = 0; x < h.length; x++ ) {
+  //   for ( let key in h[x] ) {
+  //     if ( h.length > 2 ) {
+  //       if ( h[x+1] !== undefined ) {
+  //         s += h[x][key] + ",";
+  //       } else if ( h[x+1] === undefined ) {
+  //         s += "& " + h[x][key];
+  //       } 
+  //     } else {
+  //       s += "& " + h[x][key]
+  //     }
+  //   }
+  // }
+  // let a =[];
+  // for ( let x = 0; x < h.length; x++ ) {
+  //   for ( let key in h[x] ) {
+  //     a.push(h[x][key]);
+  //   }
+  // }
+  // a.pop();
+  // a.join();
+  // a.push(h[h.length-1].name);
+  // return a.join(", ")//.push(h[h.length-1].name);
+  // for ( let x = 0; x < h.length; x++ ) {
+  //   if ( h.length > 2 ) {
+  //     if ( x + 1 == (h.length-1) ) {
+  //       s += h[x].name + " ";
+  //     } else if ( x == (h.length-1) ) { 
+  //       s += "& " + h[x].name;
+  //     } else {
+  //       s += h[x].name + ", ";
+  //     }
+  //   } else {
+  //     s += h[x].name;
+  //   }
+  // }
+  // s = h.forEach(x => {
+  //   x.name = x.name + ",";
+  // });
+  // return s;
+  // Other Solution
+  // function list(names){
+  //   return names.reduce(function(prev, current, index, array){
+  //     if (index === 0){
+  //       return current.name;
+  //     }
+  //     else if (index === array.length - 1){
+  //       return prev + ' & ' + current.name;
+  //     } 
+  //     else {
+  //       return prev + ', ' + current.name;
+  //     }
+  //   }, '');
+  //  }
+// }
+
+// console.log(list([ {name: 'Lisa'} ]));
+
+// This function will take in an array of numbers and return an array containing the lowest and highest digit.
+// const minMax = a => {
+//   let na = [];
+//   na.push(Math.min(...a), Math.max(...a));
+//   return na;
+// }
+
+// const minMax = a => [Math.min(...a), Math.max(...a)];
+
+// console.log(minMax([1,2,3,4,5,6]));
+
+// Returns the number of distinct case-insensitive duplicates in a string. Ie "Idivisibilities" => 2 (i repeats 7x, s repeats 2x)
+// const duplicateCount = s => { 
+//   let n = s.toLowerCase().split("").filter((v, i, a) => a.indexOf(v) !== i);
+//   return n.filter((v, i, a) => n.indexOf(v) == i).length;
+// }
+
+// function duplicateCount(text){
+//   return text.toLowerCase().split('').filter(function(val, i, arr){
+//     return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+//   }).length;
+// }
+
+// function duplicateCount(text){
+//   return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+// }
+
+// console.log(duplicateCount("Indivisibilities"));
+
+// const towerBuilder = n => {
+//   let a = [];
+//   a.;
+//   return a;
+// }
+
+// console.log(towerBuilder());
+
+// let a = "";
+// a.repeat()
