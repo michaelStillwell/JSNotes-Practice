@@ -1147,15 +1147,109 @@ let newMyName = myName();
 // console.log( addBinary(1, 2) );
 
 // Takes two strings of only letters and sorts them then returns it as a string containing only unique letters
-const longest = (s1, s2) => {
-  let a = new Array;
-  // a.push(s1.split(""), s2.split(""));
-  // a.filter(x => a.indexOf = x ? true : false);
-  return typeof a;
+// const longest = (s1, s2) => {
+//   let a = new Array;
+//   // a.push(s1.split(""), s2.split(""));
+//   // a.filter(x => a.indexOf = x ? true : false);
+//   return typeof a;
+// }
+
+// const s = "String";
+// console.log(typeof s.split(""));
+
+// console.log( longest("aretheyhere", "yestheyarehere") );
+
+class Machine {
+  constructor() {
+    this.widgets_made_count  = 0;
+    this.wear_and_tear_count = 0;
+    this.needs_reboot        = false;
+  }
+
+  makeWidgets(num) {
+    this.widgets_made_count += num;
+    this.wear_and_tear_count += (1 * Math.floor(num / 50));
+  }
+
+  fixMachine() { this.needs_reboot = true };
+
+  reboot() {
+    // fixMachine();
+    this.wear_and_tear_count -= 10;
+    this.needs_reboot         = false;
+    return this;
+  }
 }
 
-const s = "String";
-console.log(typeof s.split(""));
+const m = new Machine();
+m.makeWidgets(50);
+m.fixMachine();
+m.reboot();
+let rebootComplete = m.reboot();
+rebootComplete();
+console.log( m );
 
-console.log( longest("aretheyhere", "yestheyarehere") );
+const ss = () => console.log( "HO" );
+const a = ss();
+console.log( typeof a );
 
+//Code Here
+
+// class ProgressiveManager {
+//   constructor(first_name, last_name, email, age, reports = [], title = "Not a manager",bonus = 0 ) {
+//     this.first_name = first_name;
+//     this.last_name  = last_name;
+//     this.email      = email;
+//     this.age        = age;
+//     this.reports    = reports;
+//     this.title      = title;
+//     this.bonus      = bonus;
+//     this.emp        = 0;
+//   }
+
+//   hire() {
+//     this.emp += 4;
+      // switch (this.emp) {
+      //   case this.emp >= 1 && this.emp <= 3:
+      //     this.title = "Barely a Manager";
+      //     break;
+      //   case this.emp >= 4 && this.emp <= 10:
+      //     this.title = "Mostly a Manager";
+      //     break;
+      //   case this.emp >= 11 && this.emp <= 50:
+      //     this.title = "Manager";
+      //     break;
+      //   case this.emp >= 51 && this.emp <= 100:
+      //     this.title = "Manager Plus";
+      //     break;
+      //   case this.emp >= 101:
+      //     this.title = "Bestest Manager";
+      //     break;
+      //   default:
+      //     this.title - "Not a manager";
+      // }
+//       if ( this.emp >= 1 && this.emp <= 3 ) {
+//         this.title = "Barely a Manager";
+//       } else if (this.emp >= 4 && this.emp <= 10) {
+//         this.title = "Mostly a Manager";
+//       } else if (this.emp >= 11 && this.emp <= 50) {
+//         this.title = "Manager";
+//       } else if (this.emp >= 51 && this.emp <= 100) {
+//         this.title = "Manager Plus";
+//       } else if (this.emp >= 101) {
+//         this.title = "Bestest Manager";
+//       } else {
+//         this.title = "Not a manager";
+//       }
+//       return this.title;
+//   }
+
+//   fire() {
+//     this.emp += 1;
+//     this.bonus += 100;
+//   }
+// }
+
+// const e = new ProgressiveManager("N","S","SSS",4,[1,2,2]);
+// e.hire();
+// console.log( e )
