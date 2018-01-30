@@ -1413,3 +1413,128 @@ let newMyName = myName();
 
 // let a = "";
 // a.repeat()
+
+// Currying Functions:
+// function max(/* variable arguments */) {  
+//   var args = [].slice.call(arguments);
+//   return Math.max.apply(Math, args);
+// }
+
+// function  range(start, end, step) {  
+//   var stop = Math.max(start, end),
+//       start = Math.min(start, end),
+//       set = [];
+
+//   // step is optional
+//   step = typeof step !== 'undefined' ? step : 1;
+
+//   for (var i=start; i <=stop; i+=step) {
+//       set.push(i);
+//   }  
+//   return set;
+// }
+
+// function curry(fn, n) {  
+//   var arity = n || fn.length;
+//   return function curried() {
+//       var args = [].slice.call(arguments), 
+//           context = this;
+
+//       return args.length >= arity ?
+//           fn.apply(context, args) :
+//           function () {
+//               var rest = [].slice.call(arguments);
+//               return curried.apply(context, args.concat(rest));
+//           };
+//   };
+// }
+
+// console.log( curry(range, 2)(1)(10) );
+// console.log( curry(range, 2)(1)(10,2) );
+// console.log( curry(range, 2)(1)(10)(2) );
+
+// let e = [
+//   {
+//     name: 'Jimmy Joe',
+//     title: 'Hack0r',
+//     age: 12,
+//   },
+//   {
+//     name: 'Jeremy Schrader',
+//     age: 24,
+//     hairColor: 'brown'
+//   },
+//   {
+//     name: 'Carly Armstrong',
+//     title: 'CEO',
+//   }
+// ];
+
+// const func = (x,z) => {
+//   let a = [];
+//   x.forEach(() => {
+//     if ( e.includes(z) ) {
+//       a.push(y);
+//     }
+//   });
+//   return a;
+// }
+
+// console.log( func(e, name) );
+
+// let names = ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', 'Jennifer', 'Mark', 'Maddy'];
+
+// function filter(v) {
+//   let a = names;
+//   return a.filter(x => x == v  );
+// }
+
+// console.log( filter('James') );
+
+
+// import React, { Component } from 'react';
+
+// export default class EvenAndOdd extends Component {
+
+//   constructor() {
+//     super();
+
+//     this.state = {
+//       evenArray: [],
+//       oddArray: [],
+//       userInput: ''
+//     }
+//   }
+
+//   handleChange(val) {
+//     this.setState({ userInput: val });
+//   }
+
+//   assignEvenAndOdds(userInput) {
+//     var arr = userInput.split(',');
+//     var evens = [];
+//     var odds = [];
+
+//     for ( var i = 0; i < arr.length; i++ ) {
+//       if ( arr[i] % 2 === 0 ) {
+//         evens.push( parseInt(arr[i], 10) );
+//       } else {
+//         odds.push( parseInt(arr[i], 10) );
+//       }
+//     }
+    
+//     this.setState({ evenArray: evens, oddArray: odds });
+//   }
+
+//   render() {
+//     return (
+//       <div className="puzzleBox evenAndOddPB">
+//         <h4> Evens and Odds </h4>
+//         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+//         <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+//         <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+//         <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+//       </div>
+//     )
+//   }
+// }
