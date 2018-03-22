@@ -1538,3 +1538,66 @@ let newMyName = myName();
 //     )
 //   }
 // }
+
+// Count down 3 times to a given number
+// const countdown = n => {
+//   // let a = [];
+//   // a.push(n + 2, n + 1, n);
+//   // return a.join('!');
+//   return `${n+2}!${n+1}!${n}`;
+// };
+
+// Square every number in a given number
+// const squareEveryNum = n => Number(n.toString().split('').map(x => x * x).join(''));
+
+// const c = a => a.filter((x, y) => a.indexOf(y) === x);
+// const c = arr => Array.from(new Set(arr)).sort().pop();
+// c(arr);
+
+// const accum = s => s.split('').map((x,y) => x.charAt(0).toUpperCase() + x.repeat(y).toLowerCase()).join('-');
+
+// console.log(accum("abcd"));    // "A-Bb-Ccc-Dddd"
+// console.log(accum("RqaEzty")); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// console.log(accum("cwAt"));    // "C-Ww-Aaa-Tttt"
+// console.log(accum("ZpglnRxqenU"));
+// console.log(accum("NyffsGeyylB"));
+
+// let n = 1083.681, i = 0.05, t = 0.18;
+
+// let inc = n * i;
+// let dec = (n * i) * t;
+
+// n = (n + inc) - dec;
+
+// const calculateYears = (p, n, t, d) => {
+//   let y = 0;
+//   while ( p < d ) {
+//     p = (p + (p * n) - (p * n * t));
+//     y++;
+//   }
+//   return y;
+// }
+
+// function calculateYears(principal, interest, tax, desired) {
+//   return Math.ceil(
+//     Math.log(desired / principal) / 
+//     Math.log(1 + interest * (1 - tax))
+//   );
+// }
+
+// function calculateYears(P,I,T,D) { return Math.ceil( Math.log(D/P) / Math.log1p(I*(1-T)) ); }
+
+// calculateYears(1000, 0.05, 0.18, 1100);
+// calculateYears(1000,0.01625,0.18,1200);
+
+// const Xbonacci = (arr, count) => {
+//   let a = [];
+  
+//   while (a.length < count) {
+//     if ( !a.length ) a.push(0);
+//     else a.map((x, y) => a.push(a[y] + a[y-1]))
+//   }
+//   return a;
+// };
+
+// Xbonacci([0,1],10)
